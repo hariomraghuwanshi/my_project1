@@ -1,0 +1,133 @@
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(221.2, 83.2%, 53.3%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(221.2, 83.2%, 53.3%);
+  --radius: 0.5rem;
+  
+  /* Dashboard specific colors */
+  --slate-50: hsl(210, 40%, 98%);
+  --slate-100: hsl(210, 40%, 96%);
+  --slate-200: hsl(214.3, 31.8%, 91.4%);
+  --slate-300: hsl(212.7, 26.8%, 83.9%);
+  --slate-400: hsl(215.4, 16.3%, 56.9%);
+  --slate-500: hsl(215.4, 16.3%, 46.9%);
+  --slate-600: hsl(215.4, 16.3%, 36.9%);
+  --slate-700: hsl(215.3, 19.3%, 34.5%);
+  --slate-800: hsl(217.2, 19.1%, 26.7%);
+  --slate-900: hsl(222.2, 84%, 4.9%);
+  
+  /* Temperature color scale */
+  --temp-cold: hsl(0, 84.2%, 60.2%);
+  --temp-medium: hsl(221.2, 83.2%, 53.3%);
+  --temp-warm: hsl(142.1, 76.2%, 36.3%);
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --primary: hsl(217.2, 91.2%, 59.8%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(217.2, 91.2%, 59.8%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom styles for leaflet map */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
+
+.leaflet-drawing-cursor {
+  cursor: crosshair !important;
+}
+
+/* Timeline slider styles */
+.timeline-track {
+  background: hsl(var(--slate-100));
+  border-radius: 0.5rem;
+  position: relative;
+  height: 3rem;
+}
+
+.timeline-selected {
+  background: hsl(var(--primary) / 0.2);
+  border-radius: 0.25rem;
+}
+
+.timeline-handle {
+  background: hsl(var(--primary));
+  border: 2px solid hsl(var(--background));
+  border-radius: 0.25rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.timeline-handle:hover {
+  background: hsl(var(--primary) / 0.9);
+}
+
+/* Polygon styles */
+.polygon-cold {
+  fill: hsl(var(--temp-cold) / 0.4);
+  stroke: hsl(var(--temp-cold));
+}
+
+.polygon-medium {
+  fill: hsl(var(--temp-medium) / 0.4);
+  stroke: hsl(var(--temp-medium));
+}
+
+.polygon-warm {
+  fill: hsl(var(--temp-warm) / 0.4);
+  stroke: hsl(var(--temp-warm));
+}
