@@ -1,0 +1,173 @@
+Mobile App Internship Assignment
+📌 Title: "The Startup Idea Evaluator 🚀 – AI + Voting App"
+
+🧠 Problem Statement:
+You are tasked with building a mobile application where users can:
+✅ Submit their startup ideas
+
+
+⚙️ Get a fun, fake AI-generated feedback rating
+
+
+👍 Vote on others’ ideas
+
+
+🏆 See a leaderboard of top ideas
+
+
+This assignment tests your ability to:
+Build a multi-screen interactive UI
+
+
+Design a great mobile UX
+
+
+Integrate with APIs (mock or real)
+
+
+Use local state & persistent storage
+
+
+Deploy and share a working mobile app
+
+
+
+🧱 Features to Build:
+🧾 1. Idea Submission Screen
+Form Fields:
+
+
+Startup Name
+
+
+Tagline
+
+
+Description
+
+
+On submit:
+
+
+Generate a fake AI rating (0–100)
+Save the idea locally (AsyncStorage or mock API)
+
+
+Navigate to the Idea Listing screen
+
+
+
+📜 2. Idea Listing Screen
+Display all submitted ideas with:
+
+
+Name, tagline, rating, vote count
+
+
+“Upvote” button (one vote per idea using AsyncStorage)
+
+
+“Read more” option to expand full description
+
+
+Sort options: by rating or votes
+
+
+
+🏆 3. Leaderboard Screen
+Show top 5 ideas (based on votes or ratings)
+
+
+Use cool UI elements like:
+
+
+🥇🥈🥉 badges
+
+
+Cards with gradients/shadows
+
+
+
+🌚 4. Bonus Features (Optional but Impressive)
+Dark mode toggle
+
+
+Toast notifications (e.g., on submission or voting)
+
+
+Share idea via social or clipboard
+
+
+Add swipe animations / gestures
+
+
+Use custom fonts or icons
+
+
+
+🧑‍💻 Tech Stack
+Choose one:
+🔵 Option A: React Native (Preferred)
+Expo CLI (easier for testing & sharing)
+
+
+AsyncStorage / Zustand / Redux
+
+
+UI libraries: NativeBase, React Native Paper, or custom
+
+
+🟣 Option B: Flutter (if preferred)
+Dart
+
+
+localStorage or SharedPreferences
+
+
+UI: Material or Cupertino widgets
+
+
+
+🚀 Deployment & Submission
+You don’t need to publish to the App Store or Play Store.
+Choose any free method to share the app:
+✅ React Native:
+Publish on Expo Go (run expo publish)
+
+
+OR export and share .apk via Google Drive
+
+
+✅ Flutter:
+Share a debug APK via Google Drive / WeTransfer
+
+
+
+📁 What to Submit:
+App source code (GitHub repo)
+
+
+Expo link or APK download link
+
+
+README file with:
+
+
+App description
+
+
+Tech stack used
+
+
+Features implemented
+
+
+How to run locally or install the APK
+
+
+Short Loom/YT video walkthrough (2–3 mins)
+
+
+
+⏰ Deadline:
+You have 4 days from the day you applied.
